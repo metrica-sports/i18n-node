@@ -1,15 +1,23 @@
 {
-  "name": "i18n",
+  "name": "@metrica-sports/i18n",
+  "version": "1.0.0",
   "description": "lightweight translation module with dynamic json storage",
-  "version": "0.15.0",
-  "homepage": "http://github.com/mashpie/i18n-node",
   "repository": {
+    "type": "git",
+    "url": "http://github.com/metrica-sports/i18n-node.git"
+  },
+  "homepage": "http://github.com/mashpie/i18n-node",
+  "versionForked": "0.15.0",
+  "repositoryForked": {
     "type": "git",
     "url": "http://github.com/mashpie/i18n-node.git"
   },
   "author": "Marcus Spiegel <marcus.spiegel@gmail.com>",
   "funding": {
     "url": "https://github.com/sponsors/mashpie"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "main": "./index",
   "files": [
