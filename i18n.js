@@ -990,17 +990,18 @@ const i18n = function I18n(_OPTS = false) {
     let defaultSingular = singular
     let defaultPlural = plural
     if (objectNotation) {
-      let indexOfColon = singular.indexOf(':')
+      const separator = '::'
+      let indexOfColon = singular.indexOf(separator)
       // We compare against 0 instead of -1 because
-      // we don't really expect the string to start with ':'.
+      // we don't really expect the string to start with separator.
       if (indexOfColon > 0) {
-        defaultSingular = singular.substring(indexOfColon + 1)
+        defaultSingular = singular.substring(indexOfColon + separator.length)
         singular = singular.substring(0, indexOfColon)
       }
       if (plural && typeof plural !== 'number') {
-        indexOfColon = plural.indexOf(':')
+        indexOfColon = plural.indexOf(separator)
         if (indexOfColon > 0) {
-          defaultPlural = plural.substring(indexOfColon + 1)
+          defaultPlural = plural.substring(indexOfColon + separator.length)
           plural = plural.substring(0, indexOfColon)
         }
       }
